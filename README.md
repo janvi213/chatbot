@@ -1,2 +1,2 @@
 # chatbot
-A simple house chatbot
+A simple house chatbot. Its name is Jordan
