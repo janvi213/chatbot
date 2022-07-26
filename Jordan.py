@@ -1,57 +1,48 @@
-from functions import *</br>
+from functions import *
 
-# create chatbot
-</br>
-home_bot = create_bot('Jordan')</br>
+# create chatbot 
+home_bot = create_bot('Jordan')
 
 # train all data
-</br>
-train_all_data(home_bot)</br>
+train_all_data(home_bot)
 
 # check identity
-</br>
-identity = input("State your identity please: ")</br>
+identity = input("State your identity please: ")
 
 # rules for responding to different identities
-</br>
-if identity=="Mark":</br>
-    print("Welcome, Mark. Happy to have you at home.")</br>
-elif identity=="Jane":</br>
-    print("Mark is out right now, but you are welcome to the house.")</br>
-else:</br>
-    print("Your access is denied here. ")</br>
+if identity=="Mark":
+    print("Welcome, Mark. Happy to have you at home.")
+elif identity=="Jane":
+    print("Mark is out right now, but you are welcome to the house.")
+else:
+    print("Your access is denied here. ")
 
-# custom data 
-</br>
-house_owner = [</br>
-    "Who is owner of this house?",</br>
-    "Mark Nicholas is the owner of this house."</br>
-]</br>
-born = [</br>
-    "Where was I born?","You were born in Texas."</br>
-]</br>
-book=[</br>
-    "What is my favorite book?",</br>
-    "That is easy. Your favourite book is Da Vinci Code"</br>
-]</br>
-movie=[</br>
-    "What is my favorite movie?",</br>
-    "You have watched Crazy Rich Asians more times than I can count."</br>
-]</br>
-sport=[</br>
-    "What is my favorite sport?","You have always loved football."</br>
-]</br>
+# custom data
+house_owner = [
+    "Who is owner of this house?",
+    "Mark Nicholas is the owner of this house."
+]
+born = [
+    "Where was I born?","You were born in Texas."
+]
+book=[
+    "What is my favorite book?",
+    "That is easy. Your favourite book is Da Vinci Code"
+]
+movie=[
+    "What is my favorite movie?",
+    "You have watched Crazy Rich Asians more times than I can count."
+]
+sport=[
+    "What is my favorite sport?","You have always loved football."
+]
 
+custom_train(home_bot, house_owner)
+custom_train(home_bot, born)
+custom_train(home_bot, book)
+custom_train(home_bot, movie)
+custom_train(home_bot, sport)
 
-
-custom_train(home_bot, house_owner)</br>
-custom_train(home_bot, born)</br>
-custom_train(home_bot, book)</br>
-custom_train(home_bot, movie)</br>
-custom_train(home_bot, sport)</br>
-
-print("------ Training custom data ------")</br>
-
+print("------ Training custom data ------")
 # start chatbot
-</br>
-start_chatbot(home_bot)</br>
+start_chatbot(home_bot)
